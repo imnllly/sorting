@@ -35,9 +35,9 @@ def ra(a): # работает
     a = a[::-1]
     return a
 
-def rb(a): # работает
-    a = a[::-1]
-    return a
+def rb(b): # работает
+    b = b[::-1]
+    return b
 
 def rr(a, b): # работает
     a = ra(a)
@@ -52,13 +52,14 @@ def rra(a): # работает
     a = c
     return a
 
-def rrb(b): # работает
+def rrb(b):
     c = []
     c.append(b[-1])
     for i in range(len(b) - 1):
         c.append(b[i])
     b = c
     return b
+
 
 def rrr(a, b): # работает
     a = rra(a)
