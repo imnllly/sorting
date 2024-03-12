@@ -45,20 +45,22 @@ def rr(a, b): # работает
     return a, b
 
 def rra(a): # работает
-    c = []
-    c.append(a[-1])
-    for i in range(len(a) - 1):
-        c.append(a[i])
-    a = c
-    return a
+    if len(a) > 0:
+        c = []
+        c.append(a[-1])
+        for i in range(len(a) - 1):
+            c.append(a[i])
+        a = c
+        return a
 
-def rrb(b):
-    c = []
-    c.append(b[-1])
-    for i in range(len(b) - 1):
-        c.append(b[i])
-    b = c
-    return b
+def rrb(b): # работает
+    if len(b) > 0:
+        c = []
+        c.append(b[-1])
+        for i in range(len(b) - 1):
+            c.append(b[i])
+        b = c
+        return b
 
 
 def rrr(a, b): # работает
