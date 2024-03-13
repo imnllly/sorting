@@ -2,7 +2,7 @@ from func import *
 
 nums = [] #добавленные числа(a)
 empty = [] #типа b
-result = [] #результат засчет комманд
+
 num = 0
 commands = ""
 while (num != '!'):
