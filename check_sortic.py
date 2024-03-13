@@ -1,17 +1,15 @@
-from sortic import *
+from func import *
 
 nums = [] #добавленные числа(a)
 empty = [] #типа b
 result = [] #результат засчет комманд
-sort = [] #отсортированный список
 num = 0
 commands = ""
 while (num != '!'):
     num = input()
     if num != '!':
-        int(num)
-        nums.append(num)
-sort = nums.sort()
+        nums.append(int(num))
+
 while (commands != '*'):
     commands = str(input())
     if commands != '*':
@@ -37,8 +35,11 @@ while (commands != '*'):
             rrb(empty)
         elif commands == "rrr":
             rrr(nums, empty)
+        else:
+            print("error")
 print(nums)
-if sort == nums:
+print(sorted(nums))
+if sorted(nums) == nums:
     print("OK")
 else:
     print("KO")
