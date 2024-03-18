@@ -14,32 +14,33 @@ while (commands != '*'):
     commands = str(input())
     if commands != '*':
         if commands == "sa":
-            sa(nums)
+            nums = sa(nums)
         elif commands == "sb":
-            sb(empty)
+            empty = sb(empty)
         elif commands == "ss":
-            ss(nums, empty)
+            nums, empty = ss(nums, empty)
         elif commands == "pa":
-            pa(nums, empty)
+            nums, empty = pa(nums, empty)
         elif commands == "pb":
-            pb(nums, empty)
+            nums, empty = pb(nums, empty)
         elif commands == "ra":
-            ra(nums)
+            nums = ra(nums)
         elif commands == "rb":
-            rb(empty)
+            empty = rb(empty)
         elif commands == "rr":
-            rr(nums, empty)
+            nums, empty = rr(nums, empty)
         elif commands == "rra":
-            rra(nums)
+            nums = rra(nums)
         elif commands == "rrb":
-            rrb(empty)
+            empty = rrb(empty)
         elif commands == "rrr":
-            rrr(nums, empty)
+            nums, empty = rrr(nums, empty)
         else:
             print("error")
+
+sortn = sorted(nums)
 print(nums)
-print(sorted(nums))
-if sorted(nums) == nums:
+if sortn == nums:
     print("OK")
 else:
     print("KO")
