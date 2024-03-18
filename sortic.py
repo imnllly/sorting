@@ -1,20 +1,27 @@
 from func import *
+from colorama import *
 
 
-def sort(a):
+def sort(a, b):
     n = len(a)
     for i in range(n):
-        for j in range(0, n - i - 1):
-            if a[j] > a[j + 1]:
-                ss(a, [])
-                print("ss")
-            ra(a)
-            print("ra")
+        for j in range(n - i - 1):
+            if a[0] > a[1]:
+                a = sa(a)
+                # print(a)
+                print(Fore.BLUE + "sa")
+            a = ra(a)
+            # print(a)
+            print(Fore.LIGHTBLUE_EX +"ra")
+        a, b = pb(a, b)
+        # print(a)
+        #print(b)
+        print(Fore.CYAN + "pb")
 
+b = []
 a = []
 num = None
-while num != '!':
-    num = input("Введите число или '!' для окончания ввода: ")
-    if num != '!':
-        a.append(int(num))
-sort(a)
+a = input().split()
+for i in range(len(a)):
+    a[i] = int(a[i])
+sort(a, b)
